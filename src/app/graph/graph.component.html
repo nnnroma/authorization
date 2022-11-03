@@ -1,0 +1,10 @@
+<div id="div-chart">
+  <div *ngIf="barChartData; else loader">
+    <canvas baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [type]="'bar'">
+    </canvas>
+  </div>
+  <ng-template #loader>Loading...</ng-template>
+</div>

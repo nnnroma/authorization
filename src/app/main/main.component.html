@@ -1,0 +1,10 @@
+<div class="wrap">
+  <mat-tab-group>
+    <div>
+      <mat-tab label="First"> <app-info-page></app-info-page> </mat-tab>
+    </div>
+    <div *ngIf="userRole === 'Admin'">
+      <mat-tab label="Second"> <app-users-list></app-users-list> </mat-tab>
+    </div>
+  </mat-tab-group>
+</div>
