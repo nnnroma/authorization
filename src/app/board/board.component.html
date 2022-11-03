@@ -1,0 +1,25 @@
+<div class="board-item">
+  <div class="board-img-container">
+    <img [src]="board.image_url" alt="" class="board-img">
+  </div>
+  <p class="id"><span class="board-span">User ID:</span> {{board.id}}</p>
+  <p><span class="board-span">User Name:</span> {{board.name}}</p>
+  <p><span class="board-span">User Resolved:</span> {{board.users_resolved}}</p>
+  <div class="board-active">
+    <p class="board-active-text"><span class="board-span">User Active:</span></p>
+    <mat-slide-toggle
+      class="example-margin"
+      color="primary"
+      [checked]="board.active"
+      [disabled]="true">
+    </mat-slide-toggle>
+  </div>
+  <div class="graph">
+    <button class="open-graph-btn" (click)="openGraph()">{{isGraphShow ? 'Hide graph' : 'Show graph'}}</button>
+    <ng-container *ngIf="isGraphShow">
+      <app-graph [boardId]="board.id"></app-graph>
+    </ng-container>
+  </div>
+</div>
+
+

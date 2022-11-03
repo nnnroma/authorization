@@ -1,0 +1,13 @@
+.board-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  justify-content: center;
+  background-color: #D1D1D7;
+  min-height: 100vh;
+}
+
+.board-item {
+  width: 50%;
+  margin: auto;
+}
